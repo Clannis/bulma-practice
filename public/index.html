@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/bulma.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -10,6 +10,8 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,10 +26,148 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Bulma Practice Site</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <section class="hero is-primary">
+      <div class="hero-body ">
+          <div class="container">
+            <h1 class="title">
+              Bulma Practice Site
+            </h1>
+            <h2 class="subtitle">
+              First Attempt
+            </h2>
+          </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+			    <div class="column">
+            <h1 class="title">
+              Information
+            </h1>
+            <h2 class="subtitle">
+              Short Summary of Information
+            </h2>
+            <div class="buttons">
+              <a class="button is-info">
+              Find out more</a>
+              <a class="button is-danger is-outlined">
+              Buy now</a>
+            </div>
+			    </div>
+			    <div class="column">
+            <figure class="image is-16by9">
+              <img src="https://www.dataiku.com/wp-content/uploads/2019/10/chris-ried-ieic5Tq8YMk-unsplash-1618x1080.jpg" alt="code">
+            </figure>
+			    </div>
+			  </div>
+        <h1 class="title">
+          Hello World
+        </h1>
+        <p class="subtitle">
+          This is the basic starter 
+          template for Bulma
+        </p>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <span class="icon">
+                    <i class="fas fa-lg fa-home has-text-success"></i>
+                  </span>
+                  <div class="title is-size-6">Remote Work</div>
+                  <div class="subtitle is-size-6">Working from home will be so much better. It will allow me more time to play with my dog and workout!</div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <span class="icon">
+                    <i class="fas fa-lg fa-dumbbell has-text-link"></i>
+                  </span>
+                    <div class="title is-size-6">Home Gym</div>
+                    <div class="subtitle is-size-6">I can't wait to start using my new Rogue workout equipment.</div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <span class="icon">
+                  <i class="fas fa-laptop-code has-text-danger"></i>
+                </span>
+                <div class="title is-size-6">Bulma</div>
+                <div class="subtitle is-size-6">This framework is making my website look much better.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-info is-bold">
+      <div class="hero-body ">
+        <div class="columns is-vcentered">
+			    <div class="column has-text-centered">
+            <p>Look for more to come.</p>
+			    </div>
+			    <div class="column has-text-centered">
+            <p>The Dodgers won the World Series</p>
+            <p>Isn't that something crazy?</p>
+			    </div>
+			  </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero-body ">
+        <div class="columns is-vcentered level">
+          <div class="column has-text-centered level-item">
+            <p>Computers Owned</p>
+            <h1 class="title">3</h1>
+          </div>
+          <div class="column has-text-centered level-item">
+            <p>Dogs Owned</p>
+            <h1 class="title">1</h1>
+          </div>
+          <div class="column has-text-centered level-item">
+            <p>Classes Taken</p>
+            <h1 class="title">99999+</h1>
+          </div>
+          <div class="column has-text-centered level-item">
+            <p>Random Number</p>
+            <h1 class="title">634947384</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-primary">
+      <div class="hero-body ">
+        <div class="columns is-vcentered">
+          <div class="column">
+
+          </div>
+          <div class="column">
+            <div class="field">
+              <div class="control has-icons-left
+              has-icons-right">
+                <input class="input" type="email" 
+                placeholder="Your Email">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </input>
+                <input class="input" type="textarea" 
+                placeholder="Your Message"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div id="root"></div>
     <!--
       This HTML file is a template.
