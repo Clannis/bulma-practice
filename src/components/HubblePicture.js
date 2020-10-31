@@ -14,7 +14,7 @@ class HubblePicture extends Component {
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>{this.props.picture.title.split(': ')[1]}</strong> <small>{this.props.picture.pub_date}</small>
+                                <strong>{this.props.picture.title.split(': ')[1]}</strong> <small>{moment(this.props.picture.pub_date).format('MMM Do YYYY')}</small>
                                 <br></br>
                                 {this.props.picture.description}
                                 <br></br>

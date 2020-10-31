@@ -10,7 +10,6 @@ class HubbleContainer extends Component {
     }
 
     render() {
-        console.log(this.props.pictures)
         return(
             <section className="section">
                 <div className="container">
