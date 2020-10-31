@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div>
         <Title />
-        <HubbleContainer pictures={this.props.pictures} requesting={this.props.requesting}/>
+        <HubbleContainer pictures={this.props.pictures} requesting={this.props.requesting} activePicture={this.props.activePicture}/>
       </div>
     );
   }
@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch){
 }
 
 const mapStateToProps = (state) => {
-  return {pictures: state.pictures, requesting: state.requesting}
+  return {pictures: state.pictures, requesting: state.requesting, activePicture: state.activePicture}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

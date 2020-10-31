@@ -12,7 +12,7 @@ const Title = () => {
                     </h2>
                 </div>
             </div>
-      </section>
+        </section>
     )
 }
 

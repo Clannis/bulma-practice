@@ -1,10 +1,12 @@
 import { Component } from 'react'
 import moment from 'moment'
+import { addActivePicture } from '../actions/pictures'
+import {connect } from 'react-redux'
 
 class HubbleCard extends Component {
 
     handleClick = () => {
-
+        this.props.addActivePicture(this.props.picture)
     }
 
     render() {
@@ -29,4 +31,10 @@ class HubbleCard extends Component {
     }
 }
 
-export default HubbleCard
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addActivePicture: (picture) => dispatch(addActivePicture(picture))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(HubbleCard)
