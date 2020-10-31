@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import moment from 'moment'
 
-class HubblePicture extends Component {
+class HubbleCard extends Component {
     render() {
         return(
             <div className="box">
@@ -28,4 +28,4 @@ class HubblePicture extends Component {
     }
 }
 
-export default HubblePicture
+export default HubbleCard

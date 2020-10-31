@@ -1,11 +1,11 @@
 import { Component } from 'react'
-import HubblePicture from '../components/HubblePicture'
+import HubbleCard from '../components/HubbleCard'
 
 class HubbleContainer extends Component {
 
     renderHubbleCards = () => {
         return(
-            this.props.pictures.map((picture) => <HubblePicture picture={picture}/>)
+            this.props.pictures.map((picture) => <HubbleCard picture={picture}/>)
         )
     }
 
