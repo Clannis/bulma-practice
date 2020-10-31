@@ -1,6 +1,16 @@
-export default function reducer(state = {}, action) {
+export default function reducer(state = {pictures: [], requesting: false}, action) {
     switch (action.type) {
-    default:
-        return state
+        case 'START_ADDING_HUBBLE_PICTURES_REQUEST':
+            return {...state,
+                pictures: [...state.pictures],
+                requesting: true
+            }
+        case 'ADD_PICTURES':
+            return {...state,
+                pictures: action.pictures,
+                requesting: false
+            }
+        default:
+            return state
     }
 }
