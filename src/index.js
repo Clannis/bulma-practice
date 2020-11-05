@@ -8,8 +8,9 @@ import thunk from 'redux-thunk'
 import { createStore, applyMiddleware} from 'redux'
 import {BrowserRouter as Router} from 'react-router-dom'
 import reducer from './reducer/reducer'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-let store = createStore(reducer, applyMiddleware(thunk))
+let store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <React.StrictMode>

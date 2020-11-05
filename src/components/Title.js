@@ -5,10 +5,10 @@ const Title = () => {
             <div className="hero-body ">
                 <div className="container">
                     <h1 className="title">
-                    Hubble Picture Feed
+                    Hubble News Feed
                     </h1>
                     <h2 className="subtitle">
-                    View the most recent Hubble Telescope Pictures
+                    View the most recent Hubble News Articles
                     </h2>
                 </div>
             </div>

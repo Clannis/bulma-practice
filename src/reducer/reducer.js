@@ -1,19 +1,20 @@
-export default function reducer(state = {pictures: [], requesting: false, activePicture: {}}, action) {
+export default function reducer(state = {articles: [], requesting: false, activeArticle: {}}, action) {
+    let articles = state.articles
     switch (action.type) {
-        case 'START_ADDING_HUBBLE_PICTURES_REQUEST':
+        case 'START_ADDING_HUBBLE_ARTICLES_REQUEST':
             return {...state,
-                pictures: [...state.pictures],
+                articles: articles,
                 requesting: true
             }
-        case 'ADD_PICTURES':
+        case 'ADD_ARTICLE':
             return {...state,
-                pictures: action.pictures,
+                articles: articles.concat({...action.article, like: 0}),
                 requesting: false
             }
-        case 'ADD_ACTIVE_PICTURE':
+        case 'ADD_ACTIVE_ARTICLE':
             return {...state,
-                pictures: [...state.pictures],
-                activePicture: action.picture
+                articles: articles,
+                activeArticle: action.articles
             }
         default:
             return state

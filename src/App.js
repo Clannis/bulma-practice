@@ -1,8 +1,12 @@
 import { Component } from 'react'
 import Title from './components/Title'
-import HubbleContainer from './containers/HubbleContainer'
+import ArticleContainer from './containers/ArticleContainer'
 import fetchHubblePictures from './actions/fetchHubblePictures'
 import { connect } from 'react-redux'
+import { Route } from 'react-router-dom'
+import ActiveArticle from './components/ActiveArticle'
+import Loading from './components/Loading'
+
 
 class App extends Component {
 
@@ -14,7 +18,9 @@ class App extends Component {
     return (
       <div>
         <Title />
-        <HubbleContainer pictures={this.props.pictures} requesting={this.props.requesting} activePicture={this.props.activePicture}/>
+        <Loading requesting={this.props.requesting}/>
+        <Route exact path="/" render={() => <ArticleContainer articles={this.props.articles} requesting={this.props.requesting} activePicture={this.props.activePicture}/>} />
+        <Route path={`/:news_id`} render={(routerProps) => <ActiveArticle {...routerProps} articles={this.props.articles}/>}/>
       </div>
     );
   }
@@ -25,7 +31,7 @@ function mapDispatchToProps(dispatch){
 }
 
 const mapStateToProps = (state) => {
-  return {pictures: state.pictures, requesting: state.requesting, activePicture: state.activePicture}
+  return {articles: state.articles, requesting: state.requesting, activePicture: state.activePicture}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
